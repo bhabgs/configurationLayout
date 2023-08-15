@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "jsx": "preserve",
+    "target": "esnext",
+    "lib": ["dom", "esnext"],
+    "module": "esnext",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "baseUrl": ".",
+    "rootDir": ".",
+    "outDir": "dist",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "types": [],
+    "allowJs": true,
+    "checkJs": false
+  },
+  "include": ["src"],
+  "exclude": ["src/**/**.js"]
+}

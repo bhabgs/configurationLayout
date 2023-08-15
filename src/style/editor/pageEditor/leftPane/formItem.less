@@ -1,0 +1,24 @@
+.form-component {
+  padding: 0 10px;
+  //   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &-item {
+    justify-content: center;
+    color: #fff;
+    margin-bottom: 3px;
+    display: flex;
+    align-items: center;
+    width: 48%;
+
+    &:nth-child(2n) {
+      margin-left: 2%;
+    }
+
+    svg {
+      color: #fff;
+      margin-right: 5px;
+    }
+  }
+}

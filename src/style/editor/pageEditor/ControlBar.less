@@ -1,0 +1,78 @@
+@card: inl-card;
+@color: #1890ff;
+@colorDark: #1d33a2;
+
+.@{card}-ControlBar {
+  height: 100%;
+  justify-content: space-between;
+  padding: 0 16px;
+  background: #fff;
+  position: relative;
+
+  .zoom {
+    background: #f2f3f8;
+    border-radius: 4px;
+    padding: 5px 10px;
+
+    font-size: 14px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #354052;
+    line-height: 14px;
+  }
+
+  .sizeInput {
+    background: #f2f3f8;
+    border-radius: 4px;
+
+    > * {
+      background: #f2f3f8;
+    }
+  }
+
+  .@{card}-icon {
+    cursor: pointer;
+    font-size: 20px;
+    &:hover {
+      // color: @color;
+    }
+  }
+
+  .center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.full-modal {
+  .ant-modal {
+    max-width: 100%;
+    top: 0;
+    padding-bottom: 0;
+    margin: 0;
+  }
+
+  .ant-modal-content {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh);
+  }
+
+  .ant-modal-body {
+    flex: 1;
+    padding: 0;
+    overflow: hidden;
+  }
+}
+
+:root[data-doc-theme="dark"] {
+  .@{card}-ControlBar {
+    .@{card}-icon {
+      &:hover {
+        // color: @colorDark;
+      }
+    }
+  }
+}

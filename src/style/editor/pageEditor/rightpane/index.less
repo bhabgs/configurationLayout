@@ -1,0 +1,91 @@
+@import url(./video.less);
+@import url(./codeEditor.less);
+
+.right-pane {
+    border-left: #e7e7e7 solid 1px;
+    flex-direction: column;
+    overflow: hidden;
+    padding-left: 10px;
+    height: 100%;
+
+    .ant-tabs {
+        height: 100%;
+
+        .ant-tabs-content {
+            height: 100%;
+        }
+
+        .ant-tabs-tabpane {
+            flex: none;
+            width: 100%;
+            outline: none;
+            height: 100%;
+            overflow: auto;
+        }
+    }
+
+    .inl-card-theader-editor {
+        display: flex;
+        overflow-x: auto;
+
+        .item {
+            flex: 1;
+            min-width: 20px;
+            text-align: center;
+            padding: 10px 0;
+            cursor: pointer;
+
+
+            &[draggable="true"] {
+                border-bottom: 2px solid #1890ff;
+            }
+        }
+    }
+
+
+
+    .auxiliary-text {
+        font-size: 11px;
+        font-family: PingFangSC-Regular, PingFang SC;
+        font-weight: 400;
+        color: #a4aabf;
+        line-height: 16px;
+        margin-bottom: 8px;
+        padding-top: 8px;
+        border-top: 1px solid rgb(242, 243, 248);
+    }
+
+    .root_config_resolution {
+        .ant-form-item-control-input-content {
+            display: flex;
+            flex-direction: column;
+
+            .ant-input-group-wrapper {
+                &:first-child {
+                    margin-bottom: 8px;
+                }
+            }
+        }
+    }
+
+    .layout_config {
+        .ant-form-item-control-input-content {
+            display: flex;
+            flex-direction: column;
+
+            .ant-input-number-group-wrapper {
+                &:nth-child(1) {
+                    margin-bottom: 8px;
+                }
+
+                &:nth-child(2) {
+                    margin-bottom: 8px;
+                }
+
+                &:nth-child(3) {
+                    margin-bottom: 8px;
+                }
+            }
+        }
+    }
+}

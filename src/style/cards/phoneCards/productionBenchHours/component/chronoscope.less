@@ -1,0 +1,179 @@
+.chronoscope {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  color: #74f2ee;
+
+  > span {
+    margin: 0 8px;
+  }
+  &-item {
+    width: 36px;
+    height: 40px;
+    border-radius: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    overflow: hidden;
+    background: rgba(117, 223, 248, 0.3);
+    border-radius: 2px;
+    border: 2px solid #38e0db;
+    > div {
+      width: 50%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      animation-fill-mode: forwards !important;
+      > span {
+        display: block;
+        height: 40px;
+        line-height: 40px;
+        font-size: 32px;
+        font-family: DINCondensed-Bold;
+        font-weight: bold;
+        color: #1dd5cf;
+      }
+    }
+    .timeBox0 {
+      top: 0;
+      left: 0;
+    }
+    .timeBox1 {
+      top: 0;
+      right: 0;
+    }
+    .roll_0 {
+      animation: rolling_0 0.8s ease;
+    }
+
+    @keyframes rolling_0 {
+      from {
+        transform: translateY(-90%) translateZ(0);
+      }
+      to {
+        transform: translateY(0) translateZ(0);
+      }
+    }
+
+    .roll_1 {
+      animation: rolling_1 0.8s ease;
+    }
+
+    @keyframes rolling_1 {
+      from {
+        transform: translateY(0) translateZ(0);
+      }
+      to {
+        transform: translateY(-10%) translateZ(0);
+      }
+    }
+
+    .roll_2 {
+      animation: rolling_2 0.8s ease;
+    }
+
+    @keyframes rolling_2 {
+      from {
+        transform: translateY(-10%) translateZ(0);
+      }
+      to {
+        transform: translateY(-20%) translateZ(0);
+      }
+    }
+
+    .roll_3 {
+      animation: rolling_3 0.8s ease;
+    }
+
+    @keyframes rolling_3 {
+      from {
+        transform: translateY(-20%) translateZ(0);
+      }
+      to {
+        transform: translateY(-30%) translateZ(0);
+      }
+    }
+
+    .roll_4 {
+      animation: rolling_4 0.8s ease;
+    }
+
+    @keyframes rolling_4 {
+      from {
+        transform: translateY(-30%) translateZ(0);
+      }
+      to {
+        transform: translateY(-40%) translateZ(0);
+      }
+    }
+
+    .roll_5 {
+      animation: rolling_5 0.8s ease;
+    }
+
+    @keyframes rolling_5 {
+      from {
+        transform: translateY(-40%) translateZ(0);
+      }
+      to {
+        transform: translateY(-50%) translateZ(0);
+      }
+    }
+
+    .roll_6 {
+      animation: rolling_6 0.8s ease;
+    }
+
+    @keyframes rolling_6 {
+      from {
+        transform: translateY(-50%) translateZ(0);
+      }
+      to {
+        transform: translateY(-60%) translateZ(0);
+      }
+    }
+
+    .roll_7 {
+      animation: rolling_7 0.8s ease;
+    }
+
+    @keyframes rolling_7 {
+      from {
+        transform: translateY(-60%) translateZ(0);
+      }
+      to {
+        transform: translateY(-70%) translateZ(0);
+      }
+    }
+
+    .roll_8 {
+      animation: rolling_8 0.8s ease;
+    }
+
+    @keyframes rolling_8 {
+      from {
+        transform: translateY(-70%) translateZ(0);
+      }
+      to {
+        transform: translateY(-80%) translateZ(0);
+      }
+    }
+
+    .roll_9 {
+      animation: rolling_9 0.8s ease;
+    }
+
+    @keyframes rolling_9 {
+      from {
+        transform: translateY(-80%) translateZ(0);
+      }
+      to {
+        transform: translateY(-90%) translateZ(0);
+      }
+    }
+  }
+}

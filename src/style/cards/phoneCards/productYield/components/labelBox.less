@@ -1,0 +1,83 @@
+.labelBox {
+  padding: 3px 9px;
+  font-size: 14px;
+  font-weight: 400;
+
+  &.raw_coal {
+    position: relative;
+    color: #0072ff;
+
+    opacity: 0.92;
+    &::before {
+      display: inline-block;
+      content: "";
+      width: 4px;
+      height: 24px;
+      background: #0072ff;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+  &.product_coal {
+    position: relative;
+    color: #00e0d6;
+
+    opacity: 0.92;
+    &::before {
+      display: inline-block;
+      content: "";
+      width: 4px;
+      height: 24px;
+      background: #4de8e1;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+  &.clean_coal {
+    position: relative;
+    color: #ff9214;
+
+    &::before {
+      display: inline-block;
+      content: "";
+      width: 4px;
+      height: 24px;
+      background: #ff9214;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+  &.middling_coal {
+    position: relative;
+    color: #39a7e8;
+
+    &::before {
+      display: inline-block;
+      content: "";
+      width: 4px;
+      height: 24px;
+      background: #39a7e8;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+  &.gangue {
+    position: relative;
+    color: #9095a2;
+
+    &::before {
+      display: inline-block;
+      content: "";
+      width: 4px;
+      height: 24px;
+      background: #9095a2;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+}

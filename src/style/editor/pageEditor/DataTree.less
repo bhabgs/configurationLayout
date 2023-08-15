@@ -1,0 +1,33 @@
+.DataTree {
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+
+  .title {
+    height: 27px;
+    font-family: PingFangSC-Semibold, PingFang SC;
+    font-weight: 600;
+    line-height: 27px;
+    margin-bottom: 16px;
+  }
+
+  .myTree {
+    flex: 1;
+    overflow: auto;
+
+    .ant-tree-treenode {
+      .ant-tree-node-content-wrapper {
+        flex: 1;
+        .node-title {
+          display: flex;
+          justify-content: space-between;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}
+
+.ant-tree {
+  color: #5c667d;
+}

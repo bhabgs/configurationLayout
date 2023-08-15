@@ -1,0 +1,197 @@
+@import url(./ControlBar.less);
+@import url(./CardList.less);
+@import url(./rightpane/index.less);
+@import url(./DataTree.less);
+@import url(./CreatTemplate.less);
+@import url(./leftPane/index.less);
+
+@color: #1890ff;
+@colorDark: #1d33a2;
+
+.inl-page-editor {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #eff2f6;
+
+  &-header {
+    height: 46px;
+  }
+
+  &-body {
+    flex: 1;
+    display: flex;
+    overflow: hidden;
+
+    .transition {
+      transition: all 0.2s;
+    }
+
+    .splitpanes__splitter {
+      width: 3px;
+    }
+
+    &-left {
+      .transition();
+      // margin-right: 16px;
+      width: 100%;
+      border-right: #e7e7e7 solid 1px;
+      background: #fff;
+
+      &.hide {
+        width: 0;
+        .transition();
+      }
+
+      .ant-tabs-nav-wrap {
+        justify-content: center;
+      }
+
+      .ant-tabs-content-holder {
+        .ant-tabs-content {
+          height: 100%;
+        }
+      }
+    }
+
+    &-center {
+      flex-direction: column;
+    }
+
+    &-content {
+      flex: 1;
+      // background-color: #eff2f6;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+
+      .mask {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        user-select: none;
+        cursor: move;
+      }
+
+      .opt {
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        right: 0;
+        height: 0;
+        user-select: none;
+
+        .zoominfo {
+          position: absolute;
+          right: 10px;
+        }
+      }
+    }
+
+    &-right {
+      background: #fff;
+      .transition();
+
+      &.hide {
+        width: 0;
+        .transition();
+      }
+    }
+  }
+
+  /* 滚动条的整体样式 */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background-color: #f5f5f5;
+  }
+
+  /* 滚动条的轨道样式 */
+  ::-webkit-scrollbar-track {
+    background-color: #f5f5f5;
+    border-radius: 4px;
+  }
+
+  /* 滚动条的滑块样式 */
+  ::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 4px;
+  }
+
+  /* 鼠标移动到滚动条上的样式 */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #999;
+  }
+}
+
+.inl-page-editor-stage-box {
+  position: absolute;
+  display: flex;
+}
+
+.inl-page-list-box {
+  display: grid;
+  overflow: hidden;
+}
+
+.inl-page-editor-stage {
+
+  // 预览时
+  &-preview {
+    .ant-modal-close-x {
+      background-color: rgba(255, 255, 255, 0.3);
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.8);
+      }
+    }
+
+    .ant-modal-header {
+      display: none;
+    }
+  }
+
+  // 生产时
+  &-production,
+  &-preview {
+
+    .card {
+      pointer-events: none;
+
+      &.showCard {
+        pointer-events: auto;
+      }
+    }
+  }
+}
+
+.inl-card-list-box {
+  display: grid;
+  position: relative;
+}
+
+.inl-card-layout-tab {
+  .ant-tabs-nav {
+    margin: 0;
+  }
+
+  .ant-tabs-content-holder {
+    display: flex;
+
+    .ant-tabs-content {
+      height: 100%;
+
+      .ant-tabs-tabpane {
+
+        .card,
+        .inl-card-list-box {
+          height: 100%;
+        }
+      }
+    }
+  }
+}

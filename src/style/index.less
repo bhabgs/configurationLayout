@@ -1,0 +1,64 @@
+@import url(./const.less);
+@import url(./cards/index.less);
+@import url(./editor/index.less);
+@import url(./thing/index.less);
+@import url(./table.less);
+@import url(./colorChoose.less);
+
+@card: inl-card;
+
+.@{card}-icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+}
+
+.flex-colume {
+  flex-direction: column;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+each(range(12), {
+  .flex@{value} {
+    flex: @value;
+  }
+});
+
+/* 滚动条的整体样式 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background-color: #f5f5f5;
+}
+
+/* 滚动条的轨道样式 */
+::-webkit-scrollbar-track {
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+
+/* 滚动条的滑块样式 */
+::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
+}
+
+/* 鼠标移动到滚动条上的样式 */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #999;
+}

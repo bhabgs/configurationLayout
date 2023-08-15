@@ -1,0 +1,99 @@
+@color: #1890ff;
+@colorDark: #1d33a2;
+
+@background_color: #1890ff10;
+@background_colorDark: #1d33a210;
+
+.CardList {
+  height: 100%;
+  flex-direction: column;
+
+  .inl-card {
+    zoom: 0.3;
+    border-radius: 10px;
+    background-color: #051137;
+  }
+
+  .top {
+    margin-right: 16px;
+
+    .tagBox {
+      margin-top: 16px;
+      flex-wrap: wrap;
+      gap: 8px;
+
+      .ant-tag {
+        margin: 0;
+        opacity: 0.8;
+        cursor: pointer;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .cardBox {
+    gap: 16px;
+    flex-direction: column;
+    overflow: auto;
+    margin-top: 16px;
+    // padding: 0 10px;
+
+    .card {
+      width: 100%;
+      height: 160px;
+      flex-direction: column;
+      flex-shrink: 0;
+      cursor: pointer;
+      position: relative;
+      box-shadow: 0px 1px 12px 0px rgba(55, 63, 77, 0.08);
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        z-index: 1;
+      }
+
+      &:hover {
+        background: @background_color;
+      }
+
+      .thumbnail {
+        flex: 1 1 0;
+        object-fit: contain;
+        overflow: hidden;
+        background-color: #000;
+      }
+
+      .title {
+        text-align: center;
+        color: #354052;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.ant-collapse-content-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+:root[data-doc-theme="dark"] {
+  .CardList {
+    .cardBox {
+      .card {
+        &:hover {
+          background: @background_colorDark;
+        }
+      }
+    }
+  }
+}

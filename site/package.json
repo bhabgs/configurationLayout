@@ -1,0 +1,15 @@
+{
+  "name": "site",
+  "version": "1.0.0",
+  "description": "",
+  "type": "commonjs",
+  "main": "a.js",
+  "scripts": {
+    "bc": "rollup --config rollup.config.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "inl-card-v2": "^0.0.6-rc.26"
+  }
+}

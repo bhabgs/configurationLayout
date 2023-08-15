@@ -1,0 +1,147 @@
+@import "./components/cardHeaderSmall.less";
+
+.auxiliarySystem {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  zoom: 0.78;
+  .auxiliarySystem-item {
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    .auxiliarySystem-item-body {
+      flex: 1;
+      overflow: hidden;
+      &.concentrate {
+        .imgBox {
+          > img {
+            width: 45px;
+            height: 45.5px;
+          }
+        }
+        .concentrate-item {
+          display: flex;
+          align-items: center;
+          padding: 10px;
+          background: rgba(239, 242, 246, 0.3);
+          border-radius: 4px;
+          margin: 10px 0;
+          .concentrate-item-name {
+            background-color: rgba(30, 178, 255, 0.15);
+            font-size: 16px;
+            font-weight: 500;
+            color: #00a8ff;
+            padding: 3px 8px;
+          }
+          .valueInfo {
+            display: flex;
+            flex-wrap: wrap;
+          }
+          .concentrate-item-state {
+            display: flex;
+            align-items: center;
+            margin-right: 15px;
+            .label {
+              font-size: 14px;
+              font-weight: 400;
+              color: #31363c;
+            }
+            .value {
+              font-size: 16px;
+              font-weight: 600;
+              color: #22cc83;
+            }
+          }
+          .concentrate-item-value {
+            display: flex;
+            align-items: center;
+            .label {
+              font-size: 14px;
+              font-weight: 400;
+              color: #31363c;
+            }
+            .value {
+              font-size: 16px;
+              font-family: DINPro-Bold;
+              font-weight: bold;
+              color: #354052;
+            }
+          }
+        }
+      }
+      &.filterPress {
+        .imgBox {
+          > img {
+            width: 36px;
+            height: 36.5px;
+          }
+        }
+        .filterPress-item {
+          display: flex;
+          align-items: center;
+          padding: 10px;
+          background: rgba(239, 242, 246, 0.3);
+          border-radius: 4px;
+          margin: 10px 0;
+          .filterPress-item-name {
+            background-color: rgba(30, 178, 255, 0.15);
+            font-size: 16px;
+            font-weight: 500;
+            color: #00a8ff;
+            padding: 3px 8px;
+          }
+          .valueInfo {
+            display: flex;
+            flex-wrap: wrap;
+          }
+          .filterPress-item-state {
+            display: flex;
+            align-items: center;
+            margin-right: 15px;
+            .label {
+              font-size: 14px;
+              font-weight: 400;
+              color: #31363c;
+            }
+            .value {
+              font-size: 16px;
+              font-weight: 600;
+              color: #22cc83;
+            }
+          }
+          .filterPress-item-value {
+            display: flex;
+            align-items: center;
+            .label {
+              font-size: 14px;
+              font-weight: 400;
+              color: #31363c;
+            }
+            .value {
+              font-size: 16px;
+              font-family: DINPro-Bold;
+              font-weight: bold;
+              color: #354052;
+            }
+          }
+        }
+      }
+    }
+  }
+  .imgBox {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    background: rgba(34, 204, 131, 0.1);
+    border: 2px dashed rgba(34, 204, 131, 0.5);
+    position: relative;
+    > img {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

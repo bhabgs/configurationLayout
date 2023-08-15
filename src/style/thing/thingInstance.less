@@ -1,0 +1,79 @@
+@editor: inl-card-editor;
+
+.inl-card-tas-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.@{editor}-thingAppModal {
+  overflow-y: auto;
+  .thingInstance {
+    background: #fff;
+    height: 100%;
+
+    .gap {
+      gap: 8px;
+    }
+
+    .left_wrap {
+      width: 200px;
+      flex-direction: column;
+      padding-right: 0px !important;
+      flex-shrink: 0;
+      box-sizing: border-box;
+      border-right: #e7e7e7 solid 1px;
+      margin-right: 16px;
+      height: 600px;
+      .flex_lr_c {
+        font-weight: 700;
+        margin-right: 16px;
+
+        .title {
+          justify-content: space-between;
+        }
+      }
+
+      .tree_data {
+        display: flex;
+        flex-direction: column;
+        overflow: auto;
+
+        .search {
+          margin-right: 16px;
+          width: auto;
+        }
+
+        .ant-tree-switcher-noop {
+          display: none;
+        }
+      }
+
+      .tree_wrap {
+        overflow: auto;
+        margin-top: 16px;
+      }
+    }
+
+    .table_wrap {
+      flex-direction: column;
+      width: 0;
+
+      .ant-empty {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+    .props_wrap {
+      padding-left: 16px;
+      margin-left: 16px;
+      width: 300px;
+      border-left: #e7e7e7 solid 1px;
+      height: 600px;
+      overflow: auto;
+      p {
+        font-weight: 700;
+      }
+    }
+  }
+}

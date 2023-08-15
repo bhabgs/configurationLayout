@@ -1,0 +1,100 @@
+.inl-card-editor-box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+
+  .splitpanes {
+    flex: 1;
+  }
+
+  .splitpanes__pane {
+    display: flex;
+  }
+
+  .splitpanes__splitter {
+    width: 5px;
+    background-color: #f2f3f8;
+  }
+
+  &-leftcontainer {
+    .ant-tabs {
+      width: 100%;
+
+      &[disabled="true"] .ant-tabs-content-holder {
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          z-index: 20;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          cursor: not-allowed;
+          background: rgba(255, 255, 255, 0.5);
+        }
+      }
+    }
+
+    .ant-tabs-left {
+      height: 100%;
+
+      .ant-tabs-content-holder .ant-tabs-tabpane {
+        padding-left: 0;
+      }
+    }
+
+    .ant-tabs-nav {
+      margin-bottom: 0;
+      background: #f2f3f8;
+    }
+  }
+
+  &-rightcontainer {
+    background: #f2f3f8;
+    flex-direction: column;
+
+    &-opt {
+      height: 40px;
+      display: flex;
+      align-items: center;
+      padding: 0 0.5em;
+      margin: 1em;
+    }
+
+    .inl-card-editor-stage {
+      flex: 1;
+      display: flex;
+      overflow: hidden;
+
+      .inl-card {
+        flex: 1;
+        align-self: flex-start;
+        max-height: 100%;
+        margin: 1em;
+        // box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+
+        &.light {
+          background-color: #fff;
+        }
+
+        &.dark {
+          background-color: #000;
+        }
+
+        &.STBlue {
+          background-color: #0f1d49;
+        }
+
+        .inl-card-cardBody {
+          overflow: auto;
+        }
+      }
+    }
+  }
+
+  .ant-tabs-content {
+    height: 100%;
+  }
+}

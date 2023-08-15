@@ -1,0 +1,50 @@
+.inl-card-table {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    &-td {
+        flex: 1;
+        display: flex;
+        justify-content: flex-start;
+        padding: 3px 5px;
+
+        &-center {
+            justify-content: center;
+        }
+
+        &-right {
+            justify-content: flex-end;
+        }
+
+        border-left: 1px solid #ddd;
+    }
+
+    &-th {
+        height: 25px;
+        background-color: #fff;
+        display: flex;
+
+        .inl-card-table-td:first-child {
+            border-left: none;
+        }
+    }
+
+    &-tb {
+        flex: 1;
+        overflow-y: auto;
+    }
+
+    &-tr {
+        display: flex;
+
+        .inl-card-table-td:first-child {
+            border-left: none;
+        }
+
+        >div {
+            flex: 1;
+        }
+    }
+}

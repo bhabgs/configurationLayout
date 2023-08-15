@@ -1,0 +1,45 @@
+.inl-card-holder {
+    zoom: 0.5;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 340px;
+    height: 340px;
+    grid-column-gap: 3px;
+    grid-row-gap: 3px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    >div {
+        width: 110px;
+        height: 110px;
+        justify-self: center;
+        align-self: center;
+
+        &:nth-child(2n):hover {
+            cursor: pointer;
+            background-color: rgba(0, 0, 0, 0.02);
+        }
+    }
+
+    .inl-card-holder-center {
+        grid-column: 2;
+        grid-row: 2;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+
+        >div {
+            width: 33px;
+            height: 33px;
+            justify-self: center;
+            align-self: center;
+
+        }
+    }
+
+    &-title {
+        text-align: center;
+        font-weight: bold;
+    }
+}

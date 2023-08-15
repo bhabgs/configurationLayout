@@ -1,0 +1,13 @@
+{
+  "name": "industrial",
+  "version": "0.0.2",
+  "description": "工业ui",
+  "main": "index.es.js",
+  "types": "index.d.ts",
+  "scripts": {},
+  "private": true,
+  "repository": "",
+  "author": "bhabgs",
+  "license": "MIT",
+  "devDependencies": {}
+}

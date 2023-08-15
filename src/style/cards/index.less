@@ -1,0 +1,241 @@
+@import "./video/index.less";
+@import "./flowChart/index.less";
+@import "./control/index.less";
+@import "./waterCannon/index.less";
+@import "./phoneCards/index.less";
+@import "./alarm/index.less";
+
+.card {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+}
+
+.inl-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  flex: 1;
+  position: relative;
+
+  iframe {
+    outline: none;
+    border: none;
+  }
+
+  &-cardBody {
+    overflow: hidden;
+    flex: 1;
+    position: relative;
+  }
+
+  &-cardHead {
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+    padding: 0 17px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    // background: linear-gradient(270deg,
+    //     rgba(71, 87, 108, 0) 0%,
+    //     rgba(30, 112, 255, 0.43) 100%);
+    border-bottom: 1px solid #fff;
+
+    .opt-lay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 0;
+
+      border-left: none;
+      border-right: none;
+      display: flex;
+      align-items: center;
+
+      .light {
+        background-color: #8fade4;
+        position: absolute;
+        width: 10px;
+        height: 2px;
+        top: 0;
+      }
+
+      .head-icon {
+        width: 10px;
+        height: 10px;
+        background-color: #3ebcff;
+        transform: rotate(45deg);
+        margin-left: 7px;
+      }
+    }
+
+    &-cardName {
+      font-weight: 700;
+      color: #1f2329;
+      padding-left: 10px;
+      position: relative;
+      z-index: 2;
+      font-size: 18px;
+    }
+  }
+
+  // 区分主题
+  &.dark {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    div,
+    span,
+    a,
+    p,
+    b {
+      color: #fff;
+    }
+  }
+
+  &.light {
+  }
+
+  &-custom-card {
+    .inl-card-cardBody {
+      display: flex;
+
+      > div {
+        flex: 1;
+        display: flex;
+      }
+    }
+  }
+}
+
+.inl-page-editor-stage {
+  display: grid;
+  overflow: hidden;
+  flex: 1;
+
+  iframe.inl-card-background-iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    pointer-events: none;
+  }
+
+  &.inl-page-editor-stage-preview {
+    .inl-card:empty {
+      pointer-events: none;
+    }
+
+    iframe.inl-card-background-iframe {
+      pointer-events: auto;
+    }
+  }
+
+  &-adapter {
+    width: 100%;
+    height: 100%;
+  }
+
+  &-editor {
+    .card {
+      position: relative;
+      border: 0.5px solid rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+      display: flex;
+      margin: 0;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+      }
+
+      &.showCard {
+        &::before {
+          content: "" !important;
+        }
+      }
+
+      .active {
+        border-color: blue;
+        border-width: 3px;
+      }
+
+      &.card-active {
+        .active();
+      }
+
+      &.dragActive {
+        .active();
+      }
+
+      &:hover {
+        .active();
+      }
+
+      &::before {
+        content: "+";
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        font-size: 3rem;
+      }
+    }
+  }
+
+  &-pc {
+  }
+
+  &-phone {
+    overflow-y: auto;
+
+    .inl-card {
+      overflow: visible;
+
+      &-cardBody {
+        flex: 1;
+        overflow: visible;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+
+  &-vertical {
+    .card {
+      min-height: 40px;
+    }
+
+    .inl-card-list-box {
+      overflow-y: auto;
+      display: block;
+    }
+  }
+
+  &-preview-layout {
+    .card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-bottom: 0.5px solid rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  &-form {
+    .ant-form-item {
+      margin-bottom: 0;
+      align-items: center;
+    }
+  }
+}

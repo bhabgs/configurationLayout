@@ -1,0 +1,137 @@
+@import "./component/chronoscope.less";
+@import "./component/progressBar.less";
+
+.productionBenchHours {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  zoom: 0.78;
+  .productionBenchHours-top {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr 1.4fr;
+    margin-bottom: 20px;
+    .state {
+      .body {
+        display: flex;
+        align-items: flex-start;
+        .stateName {
+          width: 70%;
+          text-align: center;
+          font-size: 16px;
+          font-weight: 600;
+          padding: 2px 8px;
+          position: relative;
+          margin-top: 10px;
+          &::after {
+            content: "";
+            display: inline-block;
+            width: 100%;
+            height: 1px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+          }
+        }
+      }
+    }
+    .currentDuration {
+      margin-left: 24px;
+    }
+    .accumulatedDuration {
+      .accumulatedDuration-item {
+        display: flex;
+        align-items: center;
+        > span {
+          &:first-child {
+            margin-right: 20px;
+          }
+        }
+        &.error {
+          color: #fd5858;
+        }
+        &.stop {
+          color: #d4dddd;
+        }
+        &.run {
+          color: #0af9f2;
+        }
+      }
+    }
+    &.run {
+      .stateName {
+        color: #22cc83;
+        background: linear-gradient(
+          270deg,
+          rgba(78, 214, 156, 0.37) 0%,
+          rgba(78, 214, 156, 0.06) 100%
+        );
+        &::after {
+          background: linear-gradient(
+            270deg,
+            #faffff 0%,
+            rgba(169, 252, 255, 0) 100%
+          );
+        }
+      }
+      .stateBox {
+        background: url("/micro-assets/bigScreen/xg/functionBG1.png") no-repeat;
+        background-size: 100% 100%;
+        > img {
+          width: 36px;
+          height: 46px;
+        }
+      }
+    }
+    &.stop {
+      .stateBox {
+        background: url("/micro-assets/bigScreen/xg/StandbyBG.png") no-repeat;
+        background-size: 100% 100%;
+        > img {
+          width: 41px;
+          height: 46px;
+        }
+      }
+      .stateName {
+        color: #c3c9ca;
+        background: linear-gradient(
+          270deg,
+          #3cadbe 0%,
+          #8f9596 0%,
+          rgba(53, 58, 60, 0) 100%
+        );
+        &::after {
+          background: linear-gradient(
+            270deg,
+            #faffff 0%,
+            rgba(226, 230, 230, 0) 100%
+          );
+        }
+      }
+    }
+    &.error {
+      .stateBox {
+        background: url("/micro-assets/bigScreen/xg/faultBG.png") no-repeat;
+        background-size: 100% 100%;
+        > img {
+          width: 49px;
+          height: 44px;
+        }
+      }
+      .stateName {
+        color: #ffb9b9;
+        background: linear-gradient(
+          270deg,
+          #be3c3c 0%,
+          rgba(53, 58, 60, 0) 100%
+        );
+        &::after {
+          background: linear-gradient(
+            270deg,
+            #f9bebe 0%,
+            rgba(255, 169, 169, 0) 100%
+          );
+        }
+      }
+    }
+  }
+}

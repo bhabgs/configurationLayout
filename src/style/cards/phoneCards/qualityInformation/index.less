@@ -1,0 +1,58 @@
+.qualityInformation {
+  width: 100%;
+  height: 395px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  zoom: 0.78;
+  .qualityInformation-valueInfo {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    .qualityInformation-valueInfo-item {
+      background-color: rgba(239, 242, 246, 0.3);
+      padding: 10px;
+      .qualityInformation-valueInfo-item-title {
+        font-size: 14px;
+        font-weight: 400;
+        color: #31363c;
+      }
+      .qualityInformation-valueInfo-item-value {
+        > span {
+          &:first-child {
+            font-size: 18px;
+            font-family: DINPro-Medium;
+            font-weight: 500;
+          }
+          &:last-child {
+            font-size: 12px;
+            font-weight: 500;
+            color: #8f959e;
+          }
+        }
+      }
+      &.clean_coal {
+        .qualityInformation-valueInfo-item-value {
+          > span {
+            &:first-child {
+              color: #3e7eff;
+            }
+          }
+        }
+      }
+      &.middling_coal {
+        .qualityInformation-valueInfo-item-value {
+          > span {
+            &:first-child {
+              color: #1acad7;
+            }
+          }
+        }
+      }
+    }
+  }
+  .qualityInformation-chart {
+    flex: 1;
+    overflow: hidden;
+  }
+}

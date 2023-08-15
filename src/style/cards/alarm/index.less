@@ -1,0 +1,40 @@
+.inl-card-alarm-list {
+  height: 100%;
+  padding: 16px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  .title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color: #31363c;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .list {
+    flex: 1 1 0;
+    overflow: auto;
+    .list-item {
+      padding: 12px 0;
+      box-shadow: inset 0px -1px 0px 0px #e7e7e7;
+      &-title {
+        display: flex;
+        align-items: center;
+        margin-bottom: 6px;
+        font-size: 14px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        .anticon {
+          margin-right: 10px;
+        }
+      }
+      .description {
+        color: #8f959e;
+        font-size: 12px;
+        text-align: right;
+      }
+    }
+  }
+}
